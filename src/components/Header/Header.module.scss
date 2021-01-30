@@ -1,0 +1,18 @@
+.header {
+  @apply bg-green-600 text-white py-4;
+
+  .headerContainer {
+    @apply flex items-center justify-between;
+  }
+
+  .logo {
+    @apply flex items-center text-xl font-bold;
+    font-family: 'Poppins', sans-serif;
+
+    svg {
+      @apply fill-current mr-2;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

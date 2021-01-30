@@ -1,0 +1,21 @@
+.searchForm {
+  @apply flex;
+
+  input {
+    @apply bg-white border-0 px-4 py-2 rounded mr-2;
+  }
+
+  button {
+    @apply flex items-center rounded text-white px-4 bg-green-800;
+    
+    &:hover, &:focus {
+      @apply bg-green-900;
+    }
+
+    svg {
+      @apply fill-current;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
