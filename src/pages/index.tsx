@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Layout from '@components/Layout';
+import Container from '@components/Container';
+import BusinessList from '@components/BusinessList';
 
 export default function Home() {
   return (
@@ -7,7 +9,9 @@ export default function Home() {
       <Head>
         <title>Business | Inicio</title>
       </Head>
-      Home page
+      <Container>
+        <BusinessList />
+      </Container>
     </Layout>
   )
 }

@@ -1,0 +1,48 @@
+.businessItem {
+  @apply bg-white flex shadow-md rounded-lg;
+
+  .image {
+    @apply rounded-l-lg bg-cover bg-no-repeat mr-4;
+    width: 100px;
+    height: 100px;
+  }
+
+  .info {
+    .name {
+      @apply block font-bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .location { 
+      @apply block text-sm;
+    }
+
+    .phone { 
+      @apply flex items-center text-sm mt-2;
+
+      svg {
+        @apply fill-current mr-1;
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
+
+  .rating {
+    @apply flex items-center text-sm;
+
+    svg {
+      @apply fill-current mr-1 text-yellow-400;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .reviews {
+    @apply text-gray-500 italic text-xs;
+  }
+
+  & + div.businessItem {
+    @apply mt-4;
+  }
+}
