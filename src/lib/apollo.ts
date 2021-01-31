@@ -4,10 +4,15 @@ import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 let apolloClient;
 
 function createApolloClient() {
+  const token = process.env.NEXT_PUBLIC_YELP_API_KEY;
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: process.env.YELP_API_URL,
+      uri: `https://cors-anywhere.herokuapp.com/${process.env.NEXT_PUBLIC_YELP_API_URL}`,
+      headers: {
+        authorization: `Bearer ${token}`,
+        'Accept-Language': 'en-US',
+      }
     }),
     cache: new InMemoryCache(),
   });
